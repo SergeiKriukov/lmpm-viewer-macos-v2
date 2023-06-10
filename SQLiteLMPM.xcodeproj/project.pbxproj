@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24A2201629D1D143004673E4 /* database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A2201529D1D143004673E4 /* database.swift */; };
+		24C90B5529FD0A3D00558E7B /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C90B5429FD0A3D00558E7B /* TaskView.swift */; };
+		24C90B5729FD11B700558E7B /* SobstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C90B5629FD11B700558E7B /* SobstView.swift */; };
+		24FC787329FE78870062718B /* tabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC787229FE78870062718B /* tabsView.swift */; };
+		24FC787529FE9AF90062718B /* structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC787429FE9AF90062718B /* structures.swift */; };
+		888BC1C44B6BD163417B370E /* Pods_SQLiteLMPM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A515E276FFDF4EFEC05BBE /* Pods_SQLiteLMPM.framework */; };
+		F13CD37C29CA432500CEC404 /* SQLiteLMPMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13CD37B29CA432500CEC404 /* SQLiteLMPMApp.swift */; };
+		F13CD37E29CA432500CEC404 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13CD37D29CA432500CEC404 /* ContentView.swift */; };
+		F13CD38029CA432700CEC404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13CD37F29CA432700CEC404 /* Assets.xcassets */; };
+		F13CD38329CA432700CEC404 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13CD38229CA432700CEC404 /* Preview Assets.xcassets */; };
+		F13CD39129CA4E8200CEC404 /* dbswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13CD39029CA4E8200CEC404 /* dbswift.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		24A2201529D1D143004673E4 /* database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = database.swift; sourceTree = "<group>"; };
+		24C90B5429FD0A3D00558E7B /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		24C90B5629FD11B700558E7B /* SobstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobstView.swift; sourceTree = "<group>"; };
+		24FC787229FE78870062718B /* tabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabsView.swift; sourceTree = "<group>"; };
+		24FC787429FE9AF90062718B /* structures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = structures.swift; sourceTree = "<group>"; };
+		2ABFBE3E74ED933406EF32D5 /* Pods-SQLiteLMPM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLiteLMPM.release.xcconfig"; path = "Target Support Files/Pods-SQLiteLMPM/Pods-SQLiteLMPM.release.xcconfig"; sourceTree = "<group>"; };
+		49A515E276FFDF4EFEC05BBE /* Pods_SQLiteLMPM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SQLiteLMPM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		591865A734CE89B3FCD95FE4 /* Pods-SQLiteLMPM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLiteLMPM.debug.xcconfig"; path = "Target Support Files/Pods-SQLiteLMPM/Pods-SQLiteLMPM.debug.xcconfig"; sourceTree = "<group>"; };
+		F13CD37829CA432500CEC404 /* SQLiteLMPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SQLiteLMPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F13CD37B29CA432500CEC404 /* SQLiteLMPMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteLMPMApp.swift; sourceTree = "<group>"; };
+		F13CD37D29CA432500CEC404 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F13CD37F29CA432700CEC404 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F13CD38229CA432700CEC404 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F13CD38429CA432700CEC404 /* SQLiteLMPM.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SQLiteLMPM.entitlements; sourceTree = "<group>"; };
+		F13CD39029CA4E8200CEC404 /* dbswift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dbswift.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F13CD37529CA432500CEC404 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				888BC1C44B6BD163417B370E /* Pods_SQLiteLMPM.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2AC298CFDAD87A9D4824C633 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49A515E276FFDF4EFEC05BBE /* Pods_SQLiteLMPM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F2B2B652FAB9C26A047F429 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				591865A734CE89B3FCD95FE4 /* Pods-SQLiteLMPM.debug.xcconfig */,
+				2ABFBE3E74ED933406EF32D5 /* Pods-SQLiteLMPM.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F13CD36F29CA432500CEC404 = {
+			isa = PBXGroup;
+			children = (
+				F13CD37A29CA432500CEC404 /* SQLiteLMPM */,
+				F13CD37929CA432500CEC404 /* Products */,
+				4F2B2B652FAB9C26A047F429 /* Pods */,
+				2AC298CFDAD87A9D4824C633 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F13CD37929CA432500CEC404 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F13CD37829CA432500CEC404 /* SQLiteLMPM.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F13CD37A29CA432500CEC404 /* SQLiteLMPM */ = {
+			isa = PBXGroup;
+			children = (
+				F13CD37B29CA432500CEC404 /* SQLiteLMPMApp.swift */,
+				F13CD37D29CA432500CEC404 /* ContentView.swift */,
+				24C90B5629FD11B700558E7B /* SobstView.swift */,
+				24C90B5429FD0A3D00558E7B /* TaskView.swift */,
+				24FC787429FE9AF90062718B /* structures.swift */,
+				24A2201529D1D143004673E4 /* database.swift */,
+				24FC787229FE78870062718B /* tabsView.swift */,
+				F13CD37F29CA432700CEC404 /* Assets.xcassets */,
+				F13CD38429CA432700CEC404 /* SQLiteLMPM.entitlements */,
+				F13CD38129CA432700CEC404 /* Preview Content */,
+				F13CD39029CA4E8200CEC404 /* dbswift.swift */,
+			);
+			path = SQLiteLMPM;
+			sourceTree = "<group>";
+		};
+		F13CD38129CA432700CEC404 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F13CD38229CA432700CEC404 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F13CD37729CA432500CEC404 /* SQLiteLMPM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F13CD38729CA432700CEC404 /* Build configuration list for PBXNativeTarget "SQLiteLMPM" */;
+			buildPhases = (
+				4D2F44D5987CC3244D5008F7 /* [CP] Check Pods Manifest.lock */,
+				F13CD37429CA432500CEC404 /* Sources */,
+				F13CD37529CA432500CEC404 /* Frameworks */,
+				F13CD37629CA432500CEC404 /* Resources */,
+				74B8CC2D5612320842ABA294 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SQLiteLMPM;
+			productName = SQLiteLMPM;
+			productReference = F13CD37829CA432500CEC404 /* SQLiteLMPM.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F13CD37029CA432500CEC404 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					F13CD37729CA432500CEC404 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = F13CD37329CA432500CEC404 /* Build configuration list for PBXProject "SQLiteLMPM" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F13CD36F29CA432500CEC404;
+			productRefGroup = F13CD37929CA432500CEC404 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F13CD37729CA432500CEC404 /* SQLiteLMPM */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F13CD37629CA432500CEC404 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F13CD38329CA432700CEC404 /* Preview Assets.xcassets in Resources */,
+				F13CD38029CA432700CEC404 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4D2F44D5987CC3244D5008F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SQLiteLMPM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74B8CC2D5612320842ABA294 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SQLiteLMPM/Pods-SQLiteLMPM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SQLiteLMPM/Pods-SQLiteLMPM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SQLiteLMPM/Pods-SQLiteLMPM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F13CD37429CA432500CEC404 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24FC787329FE78870062718B /* tabsView.swift in Sources */,
+				24C90B5729FD11B700558E7B /* SobstView.swift in Sources */,
+				F13CD37E29CA432500CEC404 /* ContentView.swift in Sources */,
+				F13CD37C29CA432500CEC404 /* SQLiteLMPMApp.swift in Sources */,
+				24A2201629D1D143004673E4 /* database.swift in Sources */,
+				24C90B5529FD0A3D00558E7B /* TaskView.swift in Sources */,
+				F13CD39129CA4E8200CEC404 /* dbswift.swift in Sources */,
+				24FC787529FE9AF90062718B /* structures.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F13CD38529CA432700CEC404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F13CD38629CA432700CEC404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F13CD38829CA432700CEC404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 591865A734CE89B3FCD95FE4 /* Pods-SQLiteLMPM.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SQLiteLMPM/SQLiteLMPM.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SQLiteLMPM/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lawmatic.SQLiteLMPM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F13CD38929CA432700CEC404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2ABFBE3E74ED933406EF32D5 /* Pods-SQLiteLMPM.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SQLiteLMPM/SQLiteLMPM.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SQLiteLMPM/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lawmatic.SQLiteLMPM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F13CD37329CA432500CEC404 /* Build configuration list for PBXProject "SQLiteLMPM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F13CD38529CA432700CEC404 /* Debug */,
+				F13CD38629CA432700CEC404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F13CD38729CA432700CEC404 /* Build configuration list for PBXNativeTarget "SQLiteLMPM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F13CD38829CA432700CEC404 /* Debug */,
+				F13CD38929CA432700CEC404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F13CD37029CA432500CEC404 /* Project object */;
+}

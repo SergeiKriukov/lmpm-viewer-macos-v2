@@ -1,0 +1,6 @@
+framework module Pods_SQLiteLMPM {
+  umbrella header "Pods-SQLiteLMPM-umbrella.h"
+
+  export *
+  module * { export * }
+}
