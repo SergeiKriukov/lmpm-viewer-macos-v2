@@ -86,69 +86,47 @@ public class database {
     }
     
     
-    func readSelectedAdress(isOn: Bool, targetDate: Date) -> [ObjectsByUser]{
+    func readSelectedAdress(isOn: Bool, targetDate: Date) -> [ObjectsByUser] {
         var tempOBU = [ObjectsByUser]()
         do {
-                        """
-             
-             • Тип права
-             • Помещение (уже есть, вы добавили)+
-             • Дата начала+
-             • Дата окончания+
-             • Тип объекта+
-             • Адрес (уже есть, вы добавили)+
-             • Кадастровый номер+
-             • Этаж помещения +
-             • Площадь (уже есть, вы добавили)+
-             
-             
-             """
-            
-            
-            for row in try self.db.prepare("select   s.GUID, s.SpaceName,  s.SpaceType, s.CadastreNum,  s.InventNum, s.ObjectFloor,  s.SpaceFloor, s.Square, a.Address,   w.FracNumer  | w.FracDenom FracText, w.Square OwnSquare,   w.GUID OwnerGUID, w.DateActBeg,  w.DateActEnd, r.Value RightType from OWNER_DATA w join SPACE_DATA s on (w.SpaceGUID = s.GUID)     left join ADDRESS_DATA a on (s.GUID = a.GUID) left join REF_RIGHTS r on (w.Right_Type = r.Code) where w.PersonGUID =?", name.GUID) {
-                let GUID = row[0] as! String //GUID
-                let SPACENAME = row[1] as! String //имя помещения
-                let SPACETYPE = row[2] as! String//тип помещения
-                let SPACEFLOOR = row[6] as! String//Этаж
-                let SQUARE = row[7] as! Double //Площадь
-                let ADDRESS =  row[8] as! String//Адрес
-                let CADNUM = row[3] as! String//кадастровый номер
-                let DATEACTBEG =  row[12] as! String
+            for row in try self.db.prepare("select s.GUID, s.SpaceName, s.SpaceType, s.CadastreNum, s.InventNum, s.ObjectFloor, s.SpaceFloor, s.Square, a.Address, w.FracNumer || '/' || w.FracDenom as FracText, w.Square as OwnSquare, w.GUID as OwnerGUID, w.DateActBeg, w.DateActEnd, r.Value as RightType from OWNER_DATA w join SPACE_DATA s on (w.SpaceGUID = s.GUID) left join ADDRESS_DATA a on (s.GUID = a.GUID) left join REF_RIGHTS r on (w.Right_Type = r.Code) where w.PersonGUID = ?", name.GUID) {
+                let GUID = row[0] as? String ?? ""
+                let SPACENAME = row[1] as? String ?? ""
+                let SPACETYPE = row[2] as? String ?? ""
+                let SPACEFLOOR = row[6] as? String ?? ""
+                let SQUARE = row[7] as? Double ?? 0.0
+                let ADDRESS = row[8] as? String ?? ""
+                let CADNUM = row[3] as? String ?? ""
+                let DATEACTBEG = row[12] as? String ?? ""
                 let DATEACTEND = row[13] as? String ?? "0.0.0.0"
                 let Address1 = ObjectsByUser(GUID: GUID, SPACENAME: SPACENAME, SPACETYPE: SPACETYPE, SPACEFLOOR: SPACEFLOOR, SQUARE: SQUARE, ADDRESS: ADDRESS, CADNUM: CADNUM, DATEACTBEG: DATEACTBEG, DATEACTEND: DATEACTEND)
                 tempOBU.append(Address1)
             }
-            
         } catch {
             print("Error creating database connection: \(error)")
             return []
-            
         }
-        if isOn{
+
+        if isOn {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd" // Specify the format of the date string
-            
-            return tempOBU.filter {
-                let dateActBeg = dateFormatter.date(from: $0.DATEACTBEG)!
-                if $0.DATEACTEND != "0.0.0.0" {
-                    let dateActEndValue = dateFormatter.date(from: $0.DATEACTEND)!
+
+            return tempOBU.filter { obj in
+                guard let dateActBeg = dateFormatter.date(from: obj.DATEACTBEG) else {
+                    return false
+                }
+
+                if obj.DATEACTEND != "0.0.0.0", let dateActEndValue = dateFormatter.date(from: obj.DATEACTEND) {
                     return dateActBeg < targetDate && dateActEndValue > targetDate
                 } else {
                     return dateActBeg < targetDate
                 }
             }
-            
-            
-            
-        }
-        else{
+        } else {
             return tempOBU
         }
-        
-        
-        
-        
     }
+
     
     
     func readPersonByAddress(isOn: Bool, targetDate: Date) -> [ObjectsByAdress] {
@@ -207,14 +185,16 @@ public class database {
         do {
             var tempMeetingData = [MeetingData]()
             for row in try self.db.prepare("SELECT guid,notes,meetingdate,regtimebeg, meetingform FROM MEETING_DATA ") {
-                let guid = row[0] as! String
-                let notes = row[1] as! String
-                let meetingDate = row[2] as! String
-                let regTimeBeg = row[3] as! String
-                let meetingForm = row[4] as! String
-                
-                let data = MeetingData(guid: guid, notes: notes, meetingDate: meetingDate, regTimeBeg: regTimeBeg, meetingForm: meetingForm)
-                tempMeetingData.append(data)
+                if let guid = row[0] as? String,
+                   let notes = row[1] as? String,
+                   let meetingDate = row[2] as? String,
+                   let regTimeBeg = row[3] as? String,
+                   let meetingForm = row[4] as? String {
+                    let data = MeetingData(guid: guid, notes: notes, meetingDate: meetingDate, regTimeBeg: regTimeBeg, meetingForm: meetingForm)
+                    tempMeetingData.append(data)
+                } else {
+                    // Если какое-то значение равно nil, вы можете обработать эту ситуацию здесь, например, пропустить эту запись или установить значения по умолчанию
+                }
             }
             return tempMeetingData
         } catch {
@@ -222,6 +202,7 @@ public class database {
             return []
         }
     }
+
     
     
     
@@ -229,9 +210,12 @@ public class database {
         do {
             var tempCaseData = [CaseData]()
             for row in try self.db.prepare("SELECT title FROM CASE_DATA ") {
-                let title = row[0] as! String
-                let data = CaseData(title: title)
-                tempCaseData.append(data)
+                if let title = row[0] as? String {
+                    let data = CaseData(title: title)
+                    tempCaseData.append(data)
+                } else {
+                    // Если title равно nil, вы можете обработать эту ситуацию здесь, например, пропустить эту запись или установить значение по умолчанию
+                }
             }
             return tempCaseData
         } catch {
@@ -239,4 +223,5 @@ public class database {
             return []
         }
     }
+
 }
